@@ -14,6 +14,6 @@ public class Ssexxe {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        int i;// TODO code application logic here
+        int iV4;// TODO code application logic here
     }
 }
