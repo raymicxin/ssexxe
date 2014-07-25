@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<ruleset name="XXE Vulnerability Find"
+         xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+    <rule name="XXEVulnerabilityDetectorRule"
+          message="Parsing/Processing xml files without turning off the external entity feature could lead to possible sensitive information leakage by attackers"
+          class="bugfind.rules.xxe.XXEVulDetectorRule">
+        <description>
+            When parsing xml files in a java application, the programmer should be wary of the XMLReader.parse(...) as it could lead to potential leakage of sensitive files in on the file system via xml external entity declaration
+        </description>
+        <priority>3</priority>
+
+        <example>
+<![CDATA[
+    public void doSomething() {
+      // will give an example here in due time
+    }
+]]>
+        </example>
+    </rule>
+</ruleset>
